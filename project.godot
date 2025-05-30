@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="faeton_project"
+config/name="phaeton_project"
+run/main_scene="uid://cql7e1vfgrufa"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

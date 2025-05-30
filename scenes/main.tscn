@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cql7e1vfgrufa"]
+
+[ext_resource type="Script" uid="uid://qy02gcc1ptpt" path="res://scripts/player_character.gd" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://biek6xmoc4gj0" path="res://assets/tiles/tilesheet@2.png" id="2_sugp2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jyhfs"]
+radius = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbgi4"]
+atlas = ExtResource("2_sugp2")
+region = Rect2(768, 1024, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tefeu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbgi4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PlayerCharacter" type="CharacterBody2D" parent="."]
+script = ExtResource("1_0wfyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
+shape = SubResource("CircleShape2D_jyhfs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerCharacter"]
+position = Vector2(-2.38419e-07, -2.38419e-07)
+scale = Vector2(0.125, 0.125)
+sprite_frames = SubResource("SpriteFrames_tefeu")
