@@ -15,7 +15,12 @@ run/main_scene="uid://cql7e1vfgrufa"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-vim-joshnajera-12a12fd64534de0cc5cb1f9de1afc9b7e364b317/addons/godot-vim/plugin.cfg")
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

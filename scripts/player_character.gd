@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
-var speed = 1000
+var baseSpeed = 20
+var multSpeed = 1024
 var direction: Vector2 = Vector2(0,0)
 
 func _physics_process(delta: float) -> void:
+	look_at(get_global_mouse_position())
 	player_movement(delta)
 
 func player_movement(delta: float) -> void:
@@ -18,6 +20,6 @@ func player_movement(delta: float) -> void:
 	if Input.is_action_pressed("ui_down"):
 		direction.y += 1
 
-	velocity = direction.normalized() * speed * delta
+	velocity = direction.normalized() * baseSpeed * multSpeed * delta
 
 	move_and_slide()
